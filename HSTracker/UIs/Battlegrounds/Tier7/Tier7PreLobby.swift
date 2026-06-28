@@ -40,6 +40,7 @@ class Tier7PreLobby: OverWindowController {
     }
     
     override func awakeFromNib() {
+        window?.contentView?.localizeStaticText()
         viewModel.propertyChanged = { name in
             DispatchQueue.main.async {
                 self.update(name)

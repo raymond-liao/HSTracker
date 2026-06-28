@@ -264,6 +264,19 @@
 /* BG Session Recap */
 "Start" = "起始";
 "Current" = "当前";
+"Available Minions" = "可用随从";
+"Banned Minions" = "禁用随从";
+"Battlegrounds_Session_Header_Label_Minions_Available" = "可用随从";
+"Battlegrounds_Session_Header_Label_Minions_Banned" = "禁用随从";
+"Composition Stats" = "阵容统计";
+"Composition" = "阵容";
+"First Place" = "第一名";
+"Avg Place" = "平均排名";
+"Failed to load compositions" = "无法加载阵容统计";
+"Waiting for next game" = "等待下一场对局";
+"Latest Games" = "最近对局";
+"Hero" = "英雄";
+"Final" = "最终排名";
 "Resetting current Session" = "重置当前游戏";
 "By clicking 'Reset' you will clear your list of Latest Games and make your Start MMR the same as your current MMR." = "通过点击“重置”，将清除你的最近对局记录，并使起始MMR与当前MMR相同。";
 "Battlegrounds_Game_Ordinal_1" = "一";
@@ -278,3 +291,25 @@
 /* Buttons */
 "Change" = "更改";
 "Delete" = "删除";
+
+/* Tier7 */
+"Tier7 Battlegrounds Overlay" = "Tier7 酒馆战棋叠加层";
+"Loading..." = "加载中...";
+"Hover for more details" = "悬停查看更多详情";
+"Sign in to HSReplay.net to access Tier7 Stats directly in the overlay!" = "登录 HSReplay.net 即可直接在叠加层中查看 Tier7 统计。";
+"SIGN IN" = "登录";
+"BattlegroundsPreLobby_Authenticated_Welcome" = "欢迎 %@!";
+"BattlegroundsPreLobby_Authenticated_TrialsRemaining" = "本周剩余使用次数: %d";
+"BattlegroundsPreLobby_Authenticated_TrialsResetsIn" = "%@ 后重置";
+"Uses remaining this week:" = "本周剩余使用次数:";
+"Resets In" = "重置倒计时";
+"Join Tier7 to get unlimited access." = "加入 Tier7 以获得无限制访问。";
+"SUBSCRIBE NOW" = "立即订阅";
+"Subscribed?" = "已订阅?";
+"Sign In" = "登录";
+"Refresh" = "刷新";
+"You're subscribed to Tier7!" = "你已订阅 Tier7!";
+"All-time highest MMR" = "历史最高 MMR";
+"GO TO MY STATS" = "查看我的统计";
+"Temporarily disabled. We will be back soon!" = "暂时停用，我们会尽快恢复。";
+"You can use the Tier7 overlay for free twice each week." = "你每周可以免费使用 Tier7 叠加层两次。";

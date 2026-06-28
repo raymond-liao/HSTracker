@@ -50,10 +50,6 @@
 	<string>Copyright © 2015-2023 HearthSim LLC. All rights reserved.</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Chunkfive.otf</string>
-	</array>
 	<key>NSPrincipalClass</key>
 	<string>SentryCrashExceptionApplication</string>
 	<key>SUAutomaticallyUpdate</key>
@@ -71,6 +67,10 @@
 	<key>SecTaskAccess</key>
 	<array>
 		<string>allowed</string>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Chunkfive.otf</string>
 	</array>
 </dict>
 </plist>

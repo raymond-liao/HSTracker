@@ -177,6 +177,23 @@
 "Turns" = "回合";
 "%d turn(s) ago" = "%d 回合以前";
 "You have not fought this opponent" = "你未與這名對手對戰過";
+"Turn %d" = "回合 %d";
+"Start" = "起始";
+"Current" = "目前";
+"Change" = "變化";
+"Available Minions" = "可用手下";
+"Banned Minions" = "禁用手下";
+"Battlegrounds_Session_Header_Label_Minions_Available" = "可用手下";
+"Battlegrounds_Session_Header_Label_Minions_Banned" = "禁用手下";
+"Composition Stats" = "陣容統計";
+"Composition" = "陣容";
+"First Place" = "第一名";
+"Avg Place" = "平均排名";
+"Failed to load compositions" = "無法載入陣容統計";
+"Waiting for next game" = "等待下一場對局";
+"Latest Games" = "最近對局";
+"Hero" = "英雄";
+"Final" = "最終排名";
 
 /* Crashes */
 "HSTracker Crashed" = "HSTracker 崩潰";
@@ -188,3 +205,26 @@
 /* Mulligan toast */
 "What should I keep?" = "我應該保留什麼?";
 "HSReplay.net - Mulligan Guide" = "HSReplay.net - 調度建議";
+
+/* Tier7 */
+"Tier7 Battlegrounds Overlay" = "Tier7 戰場叠加層";
+"Loading..." = "載入中...";
+"Hover for more details" = "懸停查看更多詳情";
+"Sign in to HSReplay.net to access Tier7 Stats directly in the overlay!" = "登入 HSReplay.net 即可直接在叠加層中查看 Tier7 統計。";
+"SIGN IN" = "登入";
+"BattlegroundsPreLobby_Trial_ResetTimeRemaining_DaysHours" = "%d天 %d小時";
+"BattlegroundsPreLobby_Authenticated_Welcome" = "歡迎 %@!";
+"BattlegroundsPreLobby_Authenticated_TrialsRemaining" = "本週剩餘使用次數: %d";
+"BattlegroundsPreLobby_Authenticated_TrialsResetsIn" = "%@ 後重置";
+"Uses remaining this week:" = "本週剩餘使用次數:";
+"Resets In" = "重置倒數";
+"Join Tier7 to get unlimited access." = "加入 Tier7 以獲得無限制存取。";
+"SUBSCRIBE NOW" = "立即訂閱";
+"Subscribed?" = "已訂閱?";
+"Sign In" = "登入";
+"Refresh" = "重新整理";
+"You're subscribed to Tier7!" = "你已訂閱 Tier7!";
+"All-time highest MMR" = "歷史最高 MMR";
+"GO TO MY STATS" = "查看我的統計";
+"Temporarily disabled. We will be back soon!" = "暫時停用，我們會盡快恢復。";
+"You can use the Tier7 overlay for free twice each week." = "你每週可以免費使用 Tier7 叠加層兩次。";

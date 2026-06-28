@@ -6,7 +6,7 @@
 //  Copyright © 2022 Benjamin Michotte. All rights reserved.
 //
 
-import Foundation
+import Cocoa
 
 class TextButton: NSButton {
     @IBInspectable open var textColor: NSColor = NSColor.black
@@ -30,6 +30,10 @@ class TextButton: NSButton {
     }
 
     override func awakeFromNib() {
+        updateAttributedTitle()
+    }
+
+    func updateAttributedTitle() {
         let titleParagraphStyle = NSMutableParagraphStyle()
         titleParagraphStyle.alignment = alignment
 

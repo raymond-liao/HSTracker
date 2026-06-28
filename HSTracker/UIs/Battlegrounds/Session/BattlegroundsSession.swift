@@ -45,6 +45,11 @@ class BattlegroundsSession: OverWindowController {
     private var _battlegroundsGameMode: SelectedBattlegroundsGameMode = .unknown
     
     private let _updateCompStatsSemaphore = UnfairLock()
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        window?.contentView?.localizeStaticText()
+    }
     
     var battlegroundsGameMode: SelectedBattlegroundsGameMode {
         get {
