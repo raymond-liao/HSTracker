@@ -40,6 +40,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, SPUStandardUserDriverDelegat
     
     var coreManager: CoreManager!
     var triggers: [NSObjectProtocol] = []
+
+    private var shouldSkipAppLaunchForTests: Bool {
+        let environment = ProcessInfo.processInfo.environment
+        return environment["HSTRACKER_SKIP_APP_LAUNCH"] == "1"
+            || environment["XCTestConfigurationFilePath"] != nil
+            || environment["XCTestBundlePath"] != nil
+            || environment["XCInjectBundleInto"] != nil
+    }
     
     lazy var preferences: PreferencesWindowController = {
         let panes: [PreferencePane] = [
@@ -57,6 +65,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, SPUStandardUserDriverDelegat
     }()
     
     func applicationWillFinishLaunching(_ notification: Notification) {
+        if shouldSkipAppLaunchForTests {
+            return
+        }
+
         do {
             try AppMover.moveApp()
         } catch {
@@ -66,6 +78,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, SPUStandardUserDriverDelegat
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         AppDelegate._instance = self
+        if shouldSkipAppLaunchForTests {
+            return
+        }
+
         GameTag.initialize()
         Race.initialize()
         //setenv("CFNETWORK_DIAGNOSTICS", "3", 1)

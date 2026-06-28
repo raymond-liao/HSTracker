@@ -9,6 +9,37 @@ permissions:
   contents: read
 
 jobs:
+  test:
+    name: Run Tests
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Resolve Swift packages
+        run: xcodebuild -resolvePackageDependencies -project HSTracker.xcodeproj -scheme HSTrackerTests
+
+      - name: Run tests
+        env:
+          HSTRACKER_SKIP_APP_LAUNCH: "1"
+        run: |
+          xcodebuild \
+            -project HSTracker.xcodeproj \
+            -scheme HSTrackerTests \
+            -configuration Debug \
+            -destination 'platform=macOS' \
+            -derivedDataPath build/TestDerivedData \
+            -only-testing:HSTrackerTests/AlgorithmTests \
+            -only-testing:HSTrackerTests/EnumTests \
+            -only-testing:HSTrackerTests/ReplayUploadTests \
+            -only-testing:HSTrackerTests/StatsTests/testErfinv \
+            -only-testing:HSTrackerTests/StatsTests/testBinomialProportionConfidenceInterval \
+            test
+
   build:
     name: Build Debug App
     runs-on: macos-latest
