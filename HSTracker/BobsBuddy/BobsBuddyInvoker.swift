@@ -705,7 +705,7 @@ class BobsBuddyInvoker {
         return hand.sorted(by: { $0[.zone_position] < $1[.zone_position] })
     }
     
-    static func getMinionFromEntity(sim: SimulatorProxy, player: Bool, ent: Entity, attachedEntities: [Entity]) -> MinionProxy {
+    static func getMinionFromEntity(sim: SimulatorProxy, player: Bool, ent: Entity, attachedEntities: [Entity], allEntities: SynchronizedDictionary<Int, Entity>? = nil) -> MinionProxy {
         let cardId = ent.info.latestCardId
         let minion = sim.minionFactory.createFromCardid(id: cardId, player: player)
         
@@ -813,9 +813,41 @@ class BobsBuddyInvoker {
             }
         }
         
+        if minion.isMech() && attachedEntities.any({ e in e.has(tag: .modular)}) {
+            checkForMagneticDeathrattles(minion: minion, attachedEntities: attachedEntities, allEntities: allEntities)
+        }
+        
         minion.gameId = Int32(ent.id)
         
         return minion
+    }
+    
+    // Magnetic deathrattles can be *hiding* if initially attached to a magnetic minion that was then tripled and magnetized to another mech
+    static func checkForMagneticDeathrattles(minion: MinionProxy, attachedEntities: [Entity], allEntities: SynchronizedDictionary<Int, Entity>?) {
+        // Required to resolve the chain of magnetized
+        guard let allEntities else {
+            return
+        }
+
+        // Specific handling for: Auto Assembler
+        // Each attached enchantment's CREATOR is the magnetic card that produced it; take each distinct id once.
+        for magneticId in attachedEntities.compactMap({ e in e[GameTag.creator] }).filter({ id in id > 0 }).unique() {
+            guard allEntities[magneticId] != nil else {
+                continue
+            }
+
+            // Count the Auto Assembler enchantments attached to the magnetic (directly-magnetized Auto Assemblers).
+            let enchantCount = allEntities.values.count { x in x.isAttachedTo(entityId: magneticId) && x.cardId == CardIds.NonCollectible.Neutral.AutoAssembler_AutoAssemblerEnchantment }
+            if enchantCount == 0 {
+                continue
+            }
+
+            for _ in 0 ..< enchantCount {
+                minion.addDeathrattle(deathrattle: AutoAssembler.deathrattle(golden: false))
+            }
+        }
+
+        // Future magnetic deathrattles can be added/handled here.
     }
     
     static func getObjectiveFromEntity(factory: ObjectiveFactoryProxy, player: Bool, entity: Entity) -> ObjectiveProxy {
@@ -953,7 +985,7 @@ class BobsBuddyInvoker {
             MonoHelper.addToList(list: playerObjectives, element: BobsBuddyInvoker.getObjectiveFromEntity(factory: simulator.objectiveFactory, player: friendly, entity: objective))
         }
         
-        let playerSide = BobsBuddyInvoker.getOrderedMinions(board: gamePlayer.board).filter { e in e.isControlled(by: gamePlayer.id) }.map { e in BobsBuddyInvoker.getMinionFromEntity(sim: simulator, player: friendly, ent: e, attachedEntities: getAttachedEntities(entityId: e.id))}
+        let playerSide = BobsBuddyInvoker.getOrderedMinions(board: gamePlayer.board).filter { e in e.isControlled(by: gamePlayer.id) }.map { e in BobsBuddyInvoker.getMinionFromEntity(sim: simulator, player: friendly, ent: e, attachedEntities: getAttachedEntities(entityId: e.id), allEntities: game.entities)}
         let inputPlayerSide = inputPlayer.side
         for m in playerSide {
             MonoHelper.addToList(list: inputPlayerSide, element: m)
@@ -1064,8 +1096,12 @@ class BobsBuddyInvoker {
         
         logger.info("pBloodGem=+\(inputPlayer.bloodGemAtkBuff)/+\(inputPlayer.bloodGemHealthBuff), friendly=\(friendly)")
         
-        inputPlayer.tavernSpellAtkBuff = Int32(playerEntity[GameTag.tavern_spell_attack_increase])
-        inputPlayer.tavernSpellHealthBuff = Int32(playerEntity[GameTag.tavern_spell_health_increase])
+        let pTagTransfer = friendly ? nil : playerAttached.first(where: { x in x.cardId == CardIds.NonCollectible.Neutral.TagtransferplayerenchantDnt && x.isInPlay })
+        inputPlayer.tavernSpellAtkBuff = Int32(pTagTransfer?[.tavern_spell_attack_increase] ?? playerEntity[GameTag.tavern_spell_attack_increase])
+        inputPlayer.tavernSpellHealthBuff = Int32(pTagTransfer?[.tavern_spell_health_increase] ?? playerEntity[GameTag.tavern_spell_health_increase])
+        logger.info("pTavernSpell=+\(inputPlayer.tavernSpellAtkBuff)/+\(inputPlayer.tavernSpellHealthBuff) (opponentTransferEnchant=\(pTagTransfer != nil)), friendly=\(friendly)")
+        
+        inputPlayer.tavernSpellCounter = Int32(playerEntity[GameTag.gametag_3088])
         
         inputPlayer.deathrattleCounter = Int32(playerEntity[GameTag.gametag_4639])
          

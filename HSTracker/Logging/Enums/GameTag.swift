@@ -422,6 +422,7 @@ enum GameTag: Int, CaseIterable, Codable {
     cthun_attack_buff = 3054,
     forge_revealed = 3070,
     is_bacon_pool_spell = 3081,
+    gametag_3088 = 3088,
     bacon_duo_team_id = 3095,
     titan_ability_used_1 = 3140,
     titan_ability_used_2 = 3141,
@@ -471,11 +472,13 @@ enum GameTag: Int, CaseIterable, Codable {
     gametag_4288 = 4288,
     bacon_player_extra_gold_next_turn = 4286,
     herald_colossal_amount = 4327,
+    prepare_revealed = 4459,
     bacon_free_refresh_count = 4536,
     gametag_4629 = 4629,
     gametag_4639 = 4639,
     bacon_fodders_in_refresh = 4664,
-    gametag_4696 = 4696
+    gametag_4696 = 4696,
+    gametag_4741 = 4741
 
     static var lookup = [String: GameTag]()
     
