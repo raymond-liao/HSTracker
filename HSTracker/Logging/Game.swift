@@ -1248,6 +1248,44 @@ class Game: NSObject, PowerEventHandler {
         return entities.values.filter { $0[.player_id] == self.player.id }.sorted { $0.id < $1.id }.first
     }
 
+    static func battlegroundsFinalPlacementHero(in entities: [Entity],
+                                                playerEntity: Entity?,
+                                                playerId: Int) -> Entity? {
+        let candidates = battlegroundsFinalPlacementCandidates(in: entities, playerId: playerId)
+        if let heroEntityId = playerEntity?[.hero_entity], heroEntityId > 0,
+           let hero = candidates.first(where: { $0.id == heroEntityId }) {
+            return hero
+        }
+        return candidates.sorted { $0.id < $1.id }.first
+    }
+
+    private static func battlegroundsFinalPlacementCandidates(in entities: [Entity], playerId: Int) -> [Entity] {
+        return entities.filter { entity in
+            entity.has(tag: .player_leaderboard_place) && entity.isControlled(by: playerId)
+        }
+    }
+
+    private func battlegroundsFinalPlacementHero() -> Entity? {
+        let allEntities = entities.values
+        let hero = Game.battlegroundsFinalPlacementHero(in: allEntities,
+                                                        playerEntity: playerEntity,
+                                                        playerId: player.id)
+        let candidates = Game.battlegroundsFinalPlacementCandidates(in: allEntities, playerId: player.id)
+        let candidateIds = candidates.sorted { $0.id < $1.id }.map { entity in
+            "\(entity.id):\(entity[.player_leaderboard_place])"
+        }
+        let playerHeroEntityId = playerEntity?[.hero_entity] ?? 0
+        if candidates.count > 1 {
+            logger.warning("Multiple Battlegrounds final placement candidates "
+                + "playerHeroEntityId=\(playerHeroEntityId), selected=\(hero?.id ?? 0), candidates=\(candidateIds)")
+        }
+        if playerHeroEntityId > 0 && hero?.id != playerHeroEntityId {
+            logger.warning("Battlegrounds player hero entity \(playerHeroEntityId) was not found in "
+                + "final placement candidates; selected=\(hero?.id ?? 0), candidates=\(candidateIds)")
+        }
+        return hero
+    }
+
     var opponentEntity: Entity? {
         return entities.values.filter { $0.has(tag: .player_id) && !$0.isPlayer(eventHandler: self) }.sorted { $0.id < $1.id }.first
     }
@@ -2025,7 +2063,7 @@ class Game: NSObject, PowerEventHandler {
             }
             
             result.gameDurationSeconds = Int(result.endTime.timeIntervalSince(result.startTime))
-            let hero = entities.values.first { x in x.has(tag: .player_leaderboard_place) && x.isControlled(by: player.id) }
+            let hero = battlegroundsFinalPlacementHero()
             
             let finalPlacement = hero?[.player_leaderboard_place] ?? 0
             if battlegroundsDetails != nil {
@@ -2250,7 +2288,7 @@ class Game: NSObject, PowerEventHandler {
         if spectator {
             return
         }
-        let hero = entities.values.first(where: { x in x.has(tag: .player_leaderboard_place) && x.isControlled(by: player.id) })
+        let hero = battlegroundsFinalPlacementHero()
         let heroCardId = hero?.cardId
         let finalBoard = entities.values.filter({ x in x.isMinion && x.isInZone(zone: .play) && x.isControlled(by: player.id)}).compactMap({ x in x.copy() }).sorted(by: { x, y in
             x[.zone_position] < y[.zone_position]

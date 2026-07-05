@@ -174,7 +174,7 @@ class BattlegroundsGameView: NSView {
             }
         })
         let heroShortNameMap = RemoteConfig.data?.battlegrounds_short_names?.first(where: { x in x.dbf_id == heroCard.dbfId })
-        heroName.stringValue = heroShortNameMap?.short_name ?? heroCard.name
+        heroName.stringValue = Settings.hearthstoneLanguage == .enUS ? heroShortNameMap?.short_name ?? heroCard.name : heroCard.name
         placementText.stringValue = String.localizedString("Battlegrounds_Game_Ordinal_\(game.placement)", comment: "")
         let mmrDelta = game.ratingAfter - game.rating
         let signal = mmrDelta > 0 ? "+" : ""

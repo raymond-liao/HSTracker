@@ -57,4 +57,47 @@ class StatsTests: HSTrackerTests {
         }
         XCTAssertGreaterThan(games, 100)
     }
+
+    func testBattlegroundsFinalPlacementPrefersPlayerHeroEntityOverBroadCandidate() {
+        let playerId = 1
+        let playerEntity = Entity(id: 2)
+        playerEntity[.player_id] = playerId
+        playerEntity[.hero_entity] = 3
+
+        let wrongCandidate = battlegroundsHeroEntity(id: 1, controller: playerId, placement: 1)
+        let canonicalHero = battlegroundsHeroEntity(id: 3, controller: playerId, placement: 3)
+        let candidates = [wrongCandidate, canonicalHero]
+
+        let broadSelection = candidates.first { entity in
+            entity.has(tag: .player_leaderboard_place) && entity.isControlled(by: playerId)
+        }
+        let selectedHero = Game.battlegroundsFinalPlacementHero(in: candidates,
+                                                                playerEntity: playerEntity,
+                                                                playerId: playerId)
+
+        XCTAssertEqual(broadSelection?.id, 1)
+        XCTAssertEqual(broadSelection?[.player_leaderboard_place], 1)
+        XCTAssertEqual(selectedHero?.id, playerEntity[.hero_entity])
+        XCTAssertEqual(selectedHero?[.player_leaderboard_place], 3)
+    }
+
+    func testBattlegroundsFinalPlacementFallbackUsesSortedCandidateList() {
+        let playerId = 1
+        let highIdCandidate = battlegroundsHeroEntity(id: 4, controller: playerId, placement: 4)
+        let lowIdCandidate = battlegroundsHeroEntity(id: 1, controller: playerId, placement: 1)
+
+        let selectedHero = Game.battlegroundsFinalPlacementHero(in: [highIdCandidate, lowIdCandidate],
+                                                                playerEntity: nil,
+                                                                playerId: playerId)
+
+        XCTAssertEqual(selectedHero?.id, lowIdCandidate.id)
+        XCTAssertEqual(selectedHero?[.player_leaderboard_place], 1)
+    }
+
+    private func battlegroundsHeroEntity(id: Int, controller: Int, placement: Int) -> Entity {
+        let entity = Entity(id: id)
+        entity[.controller] = controller
+        entity[.player_leaderboard_place] = placement
+        return entity
+    }
 }
