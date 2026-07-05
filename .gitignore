@@ -44,6 +44,8 @@ xcuserdata/
 # Other
 *.moved-aside
 *.xcuserstate
+/.hermes/
+/-
 
 # AppCode
 .idea
