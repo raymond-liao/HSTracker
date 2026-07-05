@@ -37,3 +37,6 @@
 
 /* Class = "NSButton"; ibShadowedToolTip = "Notifications are only visible if Hearthstone is not focused"; ObjectID = "Yit-xi-gbj"; */
 "Yit-xi-gbj.ibShadowedToolTip" = "仅当炉石传说不在最前时显示通知";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Notifications are only visible if Hearthstone is not focused"; ObjectID = "hzK-vu-1RX"; */
+"hzK-vu-1RX.ibShadowedToolTip" = "仅当炉石传说不在最前时显示通知";

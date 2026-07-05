@@ -264,3 +264,27 @@
 
 /* No comment provided by engineer. */
 "wins" = "wins";
+
+/* No comment provided by engineer. */
+"You have not fought this opponent" = "你还没有与这个对手交战";
+
+/* No comment provided by engineer. */
+"No minions on board" = "场上没有随从";
+
+/* No comment provided by engineer. */
+"Final Board" = "最终阵容";
+
+/* No comment provided by engineer. */
+"Time ago" = "多久之前";
+
+/* No comment provided by engineer. */
+"All-time highest MMR" = "历史最高积分";
+
+/* No comment provided by engineer. */
+"GO TO MY STATS" = "查看我的统计";
+
+/* No comment provided by engineer. */
+"You're subscribed to Tier7!" = "你已订阅 Tier7！";
+
+/* No comment provided by engineer. */
+"Temporarily disabled. We will be back soon!" = "暂时停用。我们会尽快恢复！";

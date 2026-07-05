@@ -70,3 +70,46 @@
 
 /* Class = "NSToolbarItem"; paletteLabel = "Export HS"; ObjectID = "PLl-9e-lE5"; */
 "PLl-9e-lE5.paletteLabel" = "导出到炉石传说";
+
+/* Class = "NSToolbarItem"; label = "Discord"; ObjectID = "0zG-7b-xsf"; */
+"0zG-7b-xsf.label" = "Discord";
+
+
+/* Class = "NSToolbarItem"; paletteLabel = "Discord"; ObjectID = "0zG-7b-xsf"; */
+"0zG-7b-xsf.paletteLabel" = "Discord";
+
+
+/* Class = "NSToolbarItem"; label = "Classes"; ObjectID = "Hyt-EI-Vfy"; */
+"Hyt-EI-Vfy.label" = "职业";
+
+
+/* Class = "NSToolbarItem"; paletteLabel = "Classes"; ObjectID = "Hyt-EI-Vfy"; */
+"Hyt-EI-Vfy.paletteLabel" = "职业";
+
+
+/* Class = "NSButtonCell"; title = "Edit"; ObjectID = "K4S-En-2ZL"; */
+"K4S-En-2ZL.title" = "编辑";
+
+
+/* Class = "NSToolbarItem"; paletteLabel = "Export"; ObjectID = "XUQ-ti-e6U"; */
+"XUQ-ti-e6U.paletteLabel" = "导出";
+
+
+/* Class = "NSButtonCell"; title = "Rename"; ObjectID = "YTC-HA-6U7"; */
+"YTC-HA-6U7.title" = "重命名";
+
+
+/* Class = "NSToolbarItem"; label = "Twitter"; ObjectID = "d38-Pq-vZv"; */
+"d38-Pq-vZv.label" = "Twitter";
+
+
+/* Class = "NSToolbarItem"; paletteLabel = "Twitter"; ObjectID = "d38-Pq-vZv"; */
+"d38-Pq-vZv.paletteLabel" = "Twitter";
+
+
+/* Class = "NSButtonCell"; title = "Delete"; ObjectID = "hbn-wb-w85"; */
+"hbn-wb-w85.title" = "删除";
+
+
+/* Class = "NSButtonCell"; title = "Use"; ObjectID = "xp4-7a-GbL"; */
+"xp4-7a-GbL.title" = "使用";

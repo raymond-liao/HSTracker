@@ -77,6 +77,9 @@
 /* Class = "NSButtonCell"; title = "Allow HSTracker to run on fullscreen mode"; ObjectID = "6Gc-EJ-z7F"; */
 "6Gc-EJ-z7F.title" = "使 HSTracker 全屏运行";
 
+/* Class = "NSButton"; ibShadowedToolTip = "HSTracker will be visible on all your workspace while playing"; ObjectID = "aO1-IW-r7y"; */
+"aO1-IW-r7y.ibShadowedToolTip" = "游戏时 HSTracker 会显示在所有桌面空间中";
+
 /* Class = "NSButtonCell"; title = "Hide all trackers if not in game"; ObjectID = "hvr-dD-qVr"; */
 "hvr-dD-qVr.title" = "不在对局中时隐藏所有记牌器";
 

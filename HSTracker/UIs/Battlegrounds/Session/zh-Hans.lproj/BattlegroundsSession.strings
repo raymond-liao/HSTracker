@@ -5,6 +5,9 @@
 /* Class = "NSTextFieldCell"; title = "0"; ObjectID = "5Iv-FD-3EE"; */
 "5Iv-FD-3EE.title" = "0";
 
+/* Class = "NSTextFieldCell"; title = "MMR"; ObjectID = "MLO-21-bwH"; */
+"MLO-21-bwH.title" = "积分";
+
 /* Class = "NSTextFieldCell"; title = "No games played this session."; ObjectID = "7m7-Z3-h67"; */
 "7m7-Z3-h67.title" = "本次游戏期间没有对局记录。";
 
@@ -23,17 +26,20 @@
 /* Class = "NSTextFieldCell"; title = "0"; ObjectID = "RZG-YG-Lt0"; */
 "RZG-YG-Lt0.title" = "0";
 
+/* Class = "NSTextFieldCell"; title = "MMR"; ObjectID = "bGX-b0-wmd"; */
+"bGX-b0-wmd.title" = "积分";
+
 /* Class = "NSBox"; title = "Box"; ObjectID = "SvQ-Ml-UVU"; */
 "SvQ-Ml-UVU.title" = "Box";
 
 /* Class = "NSTextFieldCell"; title = "MMR"; ObjectID = "V6f-P8-1Oy"; */
-"V6f-P8-1Oy.title" = "MMR";
+"V6f-P8-1Oy.title" = "积分";
 
 /* Class = "NSTextFieldCell"; title = "Latest Games"; ObjectID = "VL2-Bl-ipX"; */
 "VL2-Bl-ipX.title" = "最近对局";
 
 /* Class = "NSTextFieldCell"; title = "MMR"; ObjectID = "WXy-qI-nin"; */
-"WXy-qI-nin.title" = "MMR";
+"WXy-qI-nin.title" = "积分";
 
 /* Class = "NSBox"; title = "Box"; ObjectID = "aNM-VY-1mc"; */
 "aNM-VY-1mc.title" = "Box";

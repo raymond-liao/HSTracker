@@ -1,0 +1,21 @@
+
+/* Class = "NSTextFieldCell"; title = "AVG DMG"; ObjectID = "EbW-eL-CJE"; */
+"EbW-eL-CJE.title" = "平均伤害";
+
+/* Class = "NSTextFieldCell"; title = "Tie"; ObjectID = "Ek9-wV-FN6"; */
+"Ek9-wV-FN6.title" = "平局";
+
+/* Class = "NSTextFieldCell"; title = "Lethal"; ObjectID = "KL3-ZW-CmV"; */
+"KL3-ZW-CmV.title" = "斩杀";
+
+/* Class = "NSTextFieldCell"; title = "Loss"; ObjectID = "am7-wl-m8P"; */
+"am7-wl-m8P.title" = "败率";
+
+/* Class = "NSTextFieldCell"; title = "Win"; ObjectID = "ap0-Df-S17"; */
+"ap0-Df-S17.title" = "胜率";
+
+/* Class = "NSTextFieldCell"; title = "Lethal"; ObjectID = "e3u-8j-TGc"; */
+"e3u-8j-TGc.title" = "斩杀";
+
+/* Class = "NSTextFieldCell"; title = "AVG DMG"; ObjectID = "h3H-2c-OkJ"; */
+"h3H-2c-OkJ.title" = "平均伤害";

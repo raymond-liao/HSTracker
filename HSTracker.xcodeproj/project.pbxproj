@@ -37,6 +37,7 @@
 		432AD9591DAD46AA00D8F959 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432AD9581DAD46AA00D8F959 /* HttpMethod.swift */; };
 		432AD95B1DAD46FF00D8F959 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432AD95A1DAD46FF00D8F959 /* Http.swift */; };
 		432AD95D1DAD81B500D8F959 /* HttpEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432AD95C1DAD81B500D8F959 /* HttpEncoding.swift */; };
+		7A0DFF459A1B980BF5774006 /* HearthstoneNetworkConnectionInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4D1B74897214868E05B5B3 /* HearthstoneNetworkConnectionInspector.swift */; };
 		432B5FAF1CB5351800B05D19 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 432B5FAD1CB5351800B05D19 /* Localizable.strings */; };
 		432B5FB31CB5371C00B05D19 /* PlayerTrackersPreferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 432B5FB51CB5371C00B05D19 /* PlayerTrackersPreferences.xib */; };
 		432B5FB61CB5372600B05D19 /* GamePreferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 432B5FB81CB5372600B05D19 /* GamePreferences.xib */; };
@@ -167,6 +168,7 @@
 		43C1C9F81E96CCE9008C20B1 /* HSTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439C7E601C7772C100D29859 /* HSTrackerTests.swift */; };
 		43C1C9F91E96CCE9008C20B1 /* LogReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF1B58B1E815810007DCBF2 /* LogReaderTests.swift */; };
 		43C1C9FB1E96CCE9008C20B1 /* StatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94596811D174FBA008CD47A /* StatsTests.swift */; };
+		49F6186A202EDF179E9E2408 /* HearthstoneNetworkConnectionInspectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594B8B8C91016D6D16A63FFC /* HearthstoneNetworkConnectionInspectorTests.swift */; };
 		43C1C9FD1E96CCE9008C20B1 /* DatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439B1DF51E86CC280098BBBC /* DatabaseTests.swift */; };
 		43C1C9FE1E96CCE9008C20B1 /* PowerParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCB4AE71E8A41E3003FD1AD /* PowerParserTests.swift */; };
 		43C1CA011E96CD6F008C20B1 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438B04F81E6F55720071594B /* Date.swift */; };
@@ -1554,6 +1556,7 @@
 		432AD9581DAD46AA00D8F959 /* HttpMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 		432AD95A1DAD46FF00D8F959 /* Http.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
 		432AD95C1DAD81B500D8F959 /* HttpEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpEncoding.swift; sourceTree = "<group>"; };
+		FD4D1B74897214868E05B5B3 /* HearthstoneNetworkConnectionInspector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HearthstoneNetworkConnectionInspector.swift; sourceTree = "<group>"; };
 		432B5FAE1CB5351800B05D19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		432B5FB41CB5371C00B05D19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PlayerTrackersPreferences.xib; sourceTree = "<group>"; };
 		432B5FB71CB5372600B05D19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GamePreferences.xib; sourceTree = "<group>"; };
@@ -1710,6 +1713,7 @@
 		439C7E571C7772C000D29859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = HSTracker/Info.plist; sourceTree = "<group>"; };
 		439C7E5C1C7772C100D29859 /* HSTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HSTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		439C7E601C7772C100D29859 /* HSTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSTrackerTests.swift; sourceTree = "<group>"; };
+		594B8B8C91016D6D16A63FFC /* HearthstoneNetworkConnectionInspectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearthstoneNetworkConnectionInspectorTests.swift; sourceTree = "<group>"; };
 		439C7E621C7772C100D29859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		439C7E791C7779D200D29859 /* HSTracker-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "HSTracker-Bridging-Header.h"; path = "HSTracker/HSTracker-Bridging-Header.h"; sourceTree = "<group>"; };
 		439C7E7D1C777CFC00D29859 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
@@ -1966,6 +1970,7 @@
 		B833361A2F69FAB000923513 /* DeathwingDiscount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathwingDiscount.swift; sourceTree = "<group>"; };
 		B833361C2F69FB9F00923513 /* HeraldCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeraldCounter.swift; sourceTree = "<group>"; };
 		B83355AF24F807220025F644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BobsBuddyPanel.xib; sourceTree = "<group>"; };
+		B83355B224F807220025F644 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BobsBuddyPanel.strings"; sourceTree = "<group>"; };
 		B83355B124F84CBF0025F644 /* libmonosgen-2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libmonosgen-2.0.a"; path = "../../../Library/Frameworks/Mono.framework/Versions/6.12.0/lib/libmonosgen-2.0.a"; sourceTree = "<group>"; };
 		B83355B324F84F200025F644 /* libiconv.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.2.dylib; path = ../../../usr/lib/libiconv.2.dylib; sourceTree = "<group>"; };
 		B836821D27873B40007D5740 /* HeroPowerDataProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroPowerDataProxy.swift; sourceTree = "<group>"; };
@@ -2166,6 +2171,7 @@
 		B8591FF92B24F7C900B907A4 /* ObjectiveFactoryProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveFactoryProxy.swift; sourceTree = "<group>"; };
 		B8591FFB2B24F87C00B907A4 /* ObjectiveProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveProxy.swift; sourceTree = "<group>"; };
 		B85A0D52272CDDFB006D2648 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = HSTracker/UIs/Preferences/Base.lproj/MercenariesPreferences.xib; sourceTree = "<group>"; };
+		B85A0D59272CE24B006D2648 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MercenariesPreferences.strings"; sourceTree = "<group>"; };
 		B85A0D53272CDEFE006D2648 /* MercenariesPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MercenariesPreferences.swift; sourceTree = "<group>"; };
 		B85F1AC8258A558200A6F8C3 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		B8621F192746A785004DD0E9 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -3025,6 +3031,7 @@
 				432AD9581DAD46AA00D8F959 /* HttpMethod.swift */,
 				432AD95C1DAD81B500D8F959 /* HttpEncoding.swift */,
 				432AD95A1DAD46FF00D8F959 /* Http.swift */,
+				FD4D1B74897214868E05B5B3 /* HearthstoneNetworkConnectionInspector.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -3239,6 +3246,7 @@
 			isa = PBXGroup;
 			children = (
 				1CF1B5891E81426D007DCBF2 /* AlgorithmTests.swift */,
+				594B8B8C91016D6D16A63FFC /* HearthstoneNetworkConnectionInspectorTests.swift */,
 				439C7E601C7772C100D29859 /* HSTrackerTests.swift */,
 				1CF1B58B1E815810007DCBF2 /* LogReaderTests.swift */,
 				C94596811D174FBA008CD47A /* StatsTests.swift */,
@@ -6021,6 +6029,7 @@
 				B89343342CCFAF7E009A8727 /* PlayedSpellsCounter.swift in Sources */,
 				B86D89FA2D95F1D900AB65A5 /* SpiritGatherer.swift in Sources */,
 				432AD95B1DAD46FF00D8F959 /* Http.swift in Sources */,
+				7A0DFF459A1B980BF5774006 /* HearthstoneNetworkConnectionInspector.swift in Sources */,
 				B89BCE0A2FF4768B0095F011 /* CapturedArchmageCounter.swift in Sources */,
 				B8B7CC1F253C721400033758 /* BattlegroundsPreferences.swift in Sources */,
 				B89343422CD0791C009A8727 /* GalakrondCounter.swift in Sources */,
@@ -6340,6 +6349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43C1C9F61E96CCDB008C20B1 /* SecretTests.swift in Sources */,
+				49F6186A202EDF179E9E2408 /* HearthstoneNetworkConnectionInspectorTests.swift in Sources */,
 				43C1C9FB1E96CCE9008C20B1 /* StatsTests.swift in Sources */,
 				43C1C9F81E96CCE9008C20B1 /* HSTrackerTests.swift in Sources */,
 				43C1C9FD1E96CCE9008C20B1 /* DatabaseTests.swift in Sources */,
@@ -6661,6 +6671,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				B83355AF24F807220025F644 /* Base */,
+				B83355B224F807220025F644 /* zh-Hans */,
 			);
 			name = BobsBuddyPanel.xib;
 			sourceTree = "<group>";
@@ -6669,6 +6680,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				B85A0D52272CDDFB006D2648 /* Base */,
+				B85A0D59272CE24B006D2648 /* zh-Hans */,
 			);
 			name = MercenariesPreferences.xib;
 			sourceTree = "<group>";

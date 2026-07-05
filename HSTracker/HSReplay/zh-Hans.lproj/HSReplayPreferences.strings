@@ -43,3 +43,10 @@
 
 /* Class = "NSTextFieldCell"; title = "After connecting with HSReplay, open your collection and the uploading will begin automatically."; ObjectID = "zQQ-GF-3Lg"; */
 "zQQ-GF-3Lg.title" = "在连接 HSReplay 后，打开你的收藏，上传会自动进行。";
+
+/* Class = "NSButtonCell"; title = "Login to HSReplay.net"; ObjectID = "87B-1e-y45"; */
+"87B-1e-y45.title" = "登录 HSReplay.net";
+
+
+/* Class = "NSTextFieldCell"; title = "Upload game modes"; ObjectID = "qvg-bJ-3rk"; */
+"qvg-bJ-3rk.title" = "上传游戏模式";

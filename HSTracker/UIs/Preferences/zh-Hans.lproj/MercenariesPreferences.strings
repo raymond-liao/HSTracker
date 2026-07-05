@@ -1,0 +1,15 @@
+
+/* Class = "NSButtonCell"; title = "Show player Mercenary abilities on hover"; ObjectID = "QMN-RN-SBa"; */
+"QMN-RN-SBa.title" = "悬停时显示玩家佣兵技能";
+
+/* Class = "NSButtonCell"; title = "Show ability icons below player Mercenaries"; ObjectID = "bkp-KW-tQa"; */
+"bkp-KW-tQa.title" = "在玩家佣兵下方显示技能图标";
+
+/* Class = "NSButtonCell"; title = "Show opponent Mercenary abilities on hover"; ObjectID = "i84-xc-QhF"; */
+"i84-xc-QhF.title" = "悬停时显示对手佣兵技能";
+
+/* Class = "NSButtonCell"; title = "Show Tasks panel while in Mercenaries mode"; ObjectID = "xHF-kI-BcO"; */
+"xHF-kI-BcO.title" = "佣兵模式中显示任务面板";
+
+/* Class = "NSButtonCell"; title = "Show ability icons above opponent Mercenaries"; ObjectID = "yHd-sB-xlv"; */
+"yHd-sB-xlv.title" = "在对手佣兵上方显示技能图标";

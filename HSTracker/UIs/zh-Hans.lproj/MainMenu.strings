@@ -118,3 +118,10 @@
 
 /* Class = "NSMenuItem"; title = "Bug report..."; ObjectID = "3dl-ss-r23"; */
 "3dl-ss-r23.title" = "报告问题...";
+
+/* Class = "NSMenuItem"; title = "Last replays"; ObjectID = "Ck1-T5-ndx"; */
+"Ck1-T5-ndx.title" = "最近回放";
+
+
+/* Class = "NSMenuItem"; title = "Replays"; ObjectID = "RBa-X9-6k6"; */
+"RBa-X9-6k6.title" = "回放";

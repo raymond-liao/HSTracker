@@ -37,6 +37,7 @@ class BattlegroundsDetailsWindow: OverWindowController {
     
     override func windowDidLoad() {
         super.windowDidLoad()
+        window?.contentView?.localizeStaticText()
         update()
     }
     

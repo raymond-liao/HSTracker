@@ -25,3 +25,60 @@
 
 /* Class = "NSButtonCell"; title = "Show hero comparision"; ObjectID = "oXq-kH-uaV"; */
 "oXq-kH-uaV.title" = "显示英雄对比";
+
+/* Class = "NSButtonCell"; title = "Show minion types"; ObjectID = "7dm-kv-U4Y"; */
+"7dm-kv-U4Y.title" = "显示随从类型";
+
+/* Class = "NSButtonCell"; title = "Banned"; ObjectID = "DaB-Gf-wIK"; */
+"DaB-Gf-wIK.title" = "禁用";
+
+/* Class = "NSButtonCell"; title = "Always show Tavern Tier 7"; ObjectID = "EaL-aA-A3g"; */
+"EaL-aA-A3g.title" = "始终显示酒馆等级7";
+
+/* Class = "NSButtonCell"; title = "Start, Current"; ObjectID = "L5S-gI-Wxn"; */
+"L5S-gI-Wxn.title" = "起始、当前";
+
+/* Class = "NSButtonCell"; title = "Show MMR"; ObjectID = "PrW-hA-PZj"; */
+"PrW-hA-PZj.title" = "显示积分";
+
+/* Class = "NSButtonCell"; title = "Show Tavern spells"; ObjectID = "QUp-Tx-AlQ"; */
+"QUp-Tx-AlQ.title" = "显示酒馆法术";
+
+/* Class = "NSButtonCell"; title = "Current, Change"; ObjectID = "RCI-vA-mUx"; */
+"RCI-vA-mUx.title" = "当前、变化";
+
+/* Class = "NSButtonCell"; title = "Show Tier7 menu Overlay (MMR & Stats)"; ObjectID = "Xmc-n4-oyS"; */
+"Xmc-n4-oyS.title" = "显示 Tier7 菜单叠加层（积分和统计）";
+
+/* Class = "NSButtonCell"; title = "Show session recap"; ObjectID = "ZsD-zG-uu2"; */
+"ZsD-zG-uu2.title" = "显示本次游戏总结";
+
+/* Class = "NSButtonCell"; title = "Show Trinket picking stats"; ObjectID = "be4-8p-MhH"; */
+"be4-8p-MhH.title" = "显示饰品选择统计";
+
+/* Class = "NSButtonCell"; title = "Show battlecry and deathrattle on tiers"; ObjectID = "dcW-bJ-e6v"; */
+"dcW-bJ-e6v.title" = "在等级中显示战吼和亡语";
+
+/* Class = "NSButtonCell"; title = "Enable Tier7 Overlay"; ObjectID = "fts-jC-w9N"; */
+"fts-jC-w9N.title" = "启用 Tier7 叠加层";
+
+/* Class = "NSButtonCell"; title = "Reset Session"; ObjectID = "gcd-yJ-p3G"; */
+"gcd-yJ-p3G.title" = "重置本次游戏";
+
+/* Class = "NSButtonCell"; title = "Show Battlegrounds Hero Picking Stats"; ObjectID = "gkM-fC-BN7"; */
+"gkM-fC-BN7.title" = "显示英雄选择统计";
+
+/* Class = "NSButtonCell"; title = "Show latest games"; ObjectID = "hVL-iu-9SV"; */
+"hVL-iu-9SV.title" = "显示最近对局";
+
+/* Class = "NSButtonCell"; title = "Show Battlegrounds Quest Picking Stats"; ObjectID = "po8-Pv-EE8"; */
+"po8-Pv-EE8.title" = "显示任务选择统计";
+
+/* Class = "NSTextFieldCell"; title = "Scaling"; ObjectID = "pzC-JZ-tcU"; */
+"pzC-JZ-tcU.title" = "缩放";
+
+/* Class = "NSButtonCell"; title = "Show Comp stats (in session recap)"; ObjectID = "tBZ-Tg-1hx"; */
+"tBZ-Tg-1hx.title" = "显示阵容统计（在本次游戏总结中）";
+
+/* Class = "NSButtonCell"; title = "Available"; ObjectID = "wfJ-hm-6dv"; */
+"wfJ-hm-6dv.title" = "可用";

@@ -27,6 +27,7 @@ class BattlegroundsFinalBoard: OverWindowController {
     
     override func windowDidLoad() {
         super.windowDidLoad()
+        window?.contentView?.localizeStaticText()
         if board.count > 0 {
             setBoard(board: board, endTime: endTime)
         }
